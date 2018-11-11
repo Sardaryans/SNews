@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">SNews</string>
+    <string name="news">News</string>
+    <string name="pins">Pins</string>
+</resources>
