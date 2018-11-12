@@ -25,7 +25,9 @@ class NewsAdapter(private val context: Context): RecyclerView.Adapter<NewsAdapte
     }
 
     override fun onBindViewHolder(holder: ViewHolder, possition: Int) {
-        Picasso.get().load(news[possition].newsFields?.thumbnail).into(holder.mImg)
+        if (!news[possition].newsFields?.thumbnail!!.isEmpty()){
+            Picasso.get().load(news[possition].newsFields?.thumbnail).into(holder.mImg)
+        }
         holder.mTittle.text = news[possition].title
 
         holder.mImg.setOnClickListener {

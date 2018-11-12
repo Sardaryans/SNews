@@ -39,7 +39,8 @@ class NotificationJob : Job() {
 
         fun scheduleJob() {
             JobRequest.Builder(TAG)
-                    .setExecutionWindow(TimeUnit.HOURS.toMillis(1),TimeUnit.HOURS.toMillis(1) )
+                    .setPeriodic(TimeUnit.MINUTES.toMillis(60),TimeUnit.MINUTES.toMillis(30) )
+                    .setUpdateCurrent(true)
                     .build()
                     .schedule()
         }
